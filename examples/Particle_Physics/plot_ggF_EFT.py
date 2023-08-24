@@ -7,6 +7,12 @@ The gluon-gluon fusion.
 import matplotlib.pyplot as plt
 from feynman import Diagram
 
+plt.rcParams.update({
+    "text.usetex": True,
+    "font.family": "Helveltica"})
+
+
+
 fig = plt.figure(figsize=(10.,10.))
 ax = fig.add_axes([0,0,1,1], frameon=False)
 
@@ -29,9 +35,9 @@ g2 = diagram.line(in2, v2, **gluon_down_style)
 
 higgs = diagram.line(v3, higgsout, arrow=False, style='dashed')
 
-g1.text("g",fontsize=30)
-diagram.text(v4.xy[0]-.08, v4.xy[1]-.05, "g",fontsize=35)
-higgs.text("H",fontsize=30)
+g1.text(r"$g$",fontsize=30)
+diagram.text(v4.xy[0]-.08, v4.xy[1]-.05, r"$g$",fontsize=30)
+higgs.text(r"$H$",fontsize=30)
 
 diagram.plot()
 plt.show()

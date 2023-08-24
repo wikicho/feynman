@@ -5,9 +5,8 @@ DCHP1
 Doubly Charged Higgs Production
 """
 import matplotlib
-matplotlib.rcParams['mathtext.fontset'] = 'stix'
-matplotlib.rcParams['font.family'] = 'STIXGeneral'
-
+matplotlib.rcParams['font.family'] = 'Times New Roman'
+matplotlib.rcParams["text.usetex"] = True
 from feynman import Diagram
 
 fig = matplotlib.pyplot.figure(figsize=(10.,10.))
@@ -37,8 +36,8 @@ wz1 = diagram.line(v1, v2, style='wiggly', color='green', lw=lw)
 higgsplus = diagram.line(v2, higgsplusout, arrow=False, ls='dashed', lw=lw, dashes=(4, 2))
 higgsminus = diagram.line(v2, higgsminusout, arrow=False, ls='dashed', lw=lw, dashes=(4, 2))
 
-q1.text(r"$\bar{\mathrm{q}}$", fontsize=40)
-q2.text("q",fontsize=40)
+q1.text(r"$\bar{q}$", fontsize=40)
+q2.text(r"$q$",fontsize=40)
 diagram.text(0.5, 0.42, r"$Z \ / \ \gamma*$", fontsize=40)
 diagram.text(0.8, 0.58, r"$H^{++}$", fontsize=40)
 diagram.text(0.8, 0.42, r"$H^{--}$", fontsize=40)
